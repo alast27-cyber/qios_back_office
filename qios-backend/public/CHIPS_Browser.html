@@ -74,9 +74,10 @@
     const nodeLog = document.getElementById('nodeLog');
     const connectionStatus = document.getElementById('connection-status');
 
-    // IMPORTANT: In local testing, this is correct. For deployment, you will change this URL.
-    const socket = io("http://localhost:3000");
-
+    // IMPORTANT: Use your Render/live backend URL for deployment.
+    const socket = io("https://qios-back-office.onrender.com");
+    // ...
+    
     function log(message, type = 'info') {
         const p = document.createElement('p');
         p.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
